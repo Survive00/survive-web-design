@@ -1,1 +1,221 @@
+/**
+ * Survive Web Design - Animation & Motion System
+ * Architect: Muritala Sodiq / Survive Web Design
+ * Location: Ilobu, Osun State, Nigeria
+ * Description: Keyframes, scroll reveals, smooth transitions, and accessibility overrides.
+ */
 
+/* ==========================================================================
+   1. KEYFRAME DEFINITIONS
+   ========================================================================== */
+
+/* Fade In Base */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade Up (Primary Scroll Reveal) */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Floating UI Element Animation (Hero Mockups & Floating Badges) */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Soft Radial Glow Pulse */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+/* Subtle Shimmer (Skeleton / High Light Effect) */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Spinner for Loading States */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ==========================================================================
+   2. SCROLL REVEAL UTILITY CLASSES (JS Interoperable)
+   ========================================================================== */
+
+/* Base state for scroll-reveal elements before JavaScript activates them */
+.reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.reveal-fade-up {
+  transform: translateY(32px);
+}
+
+.reveal-fade-in {
+  transform: scale(0.96);
+}
+
+.reveal-slide-left {
+  transform: translateX(-32px);
+}
+
+.reveal-slide-right {
+  transform: translateX(32px);
+}
+
+/* Active State Triggered by IntersectionObserver in JS */
+.reveal.active {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+
+/* ==========================================================================
+   3. STAGGERED ANIMATION DELAYS
+   ========================================================================== */
+
+.delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; animation-delay: 500ms; }
+
+
+/* ==========================================================================
+   4. CONTINUOUS ANIMATION CLASSES
+   ========================================================================== */
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+.animate-pulse {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+
+/* ==========================================================================
+   5. HOVER & INTERACTION MICRO-TRANSITIONS
+   ========================================================================== */
+
+/* Card Lift Transition */
+.hover-lift {
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-primary);
+}
+
+/* Button Push / Scale Transition */
+.hover-scale {
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.hover-scale:active {
+  transform: scale(0.98);
+}
+
+
+/* ==========================================================================
+   6. ACCESSIBILITY OVERRIDES (Prefers-Reduced-Motion)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .animate-float,
+  .animate-float-delayed,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
