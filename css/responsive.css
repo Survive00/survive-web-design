@@ -1,1 +1,196 @@
+/**
+ * Survive Web Design - Responsive Overrides
+ * Architect: Muritala Sodiq / Survive Web Design
+ * Location: Ilobu, Osun State, Nigeria
+ * Description: Breakpoints for Large Desktops, Laptops, Tablets, and Mobile screens.
+ */
 
+/* ==========================================================================
+   1. LAPTOP & SMALL DESKTOP BREAKPOINT (Max-width: 1024px)
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --section-padding-desktop: 4.5rem 1.5rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    margin-top: var(--space-lg);
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+
+/* ==========================================================================
+   2. TABLET BREAKPOINT (Max-width: 768px)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  :root {
+    --section-padding-desktop: var(--section-padding-mobile);
+  }
+
+  /* Header & Mobile Drawer Navigation */
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--color-dark);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--space-2xl) var(--space-md);
+    gap: var(--space-xl);
+    transition: left var(--transition-smooth);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    color: var(--text-white);
+    font-size: var(--fs-lg);
+  }
+
+  .nav-actions {
+    display: none; /* Secondary CTA integrated into drawer or hidden for space */
+  }
+
+  /* Section Headers & Spacing */
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  /* Services, Portfolio & Testimonial Grids */
+  .services-grid,
+  .portfolio-grid,
+  .testimonial-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .portfolio-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: var(--space-2xs);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+  }
+
+  /* Floating UI Cards Adjustment */
+  .floating-card-1 {
+    top: -10px;
+    left: 0;
+  }
+
+  .floating-card-2 {
+    bottom: -10px;
+    right: 0;
+  }
+
+  /* Footer Layout */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}
+
+
+/* ==========================================================================
+   3. MOBILE BREAKPOINT (Max-width: 480px)
+   ========================================================================== */
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  .hero-section {
+    padding: 3rem 0 4rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: var(--fs-sm);
+  }
+
+  .btn-large {
+    padding: 0.90rem 1.8rem;
+    font-size: var(--fs-base);
+  }
+
+  .floating-card {
+    display: none; /* Hide decorative floating UI cards on extra small screens for screen clearance */
+  }
+
+  .trusted-logos {
+    gap: var(--space-md);
+  }
+
+  .industry-item {
+    font-size: var(--fs-sm);
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  .cta-box {
+    padding: var(--space-xl) var(--space-md);
+  }
+}
