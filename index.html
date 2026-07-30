@@ -3,41 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Survive Web Design | Professional Web Designer & WordPress Developer</title>
-  <meta name="description" content="Custom web design, WordPress development, and high-converting digital solutions tailored for modern businesses.">
+  <title>Survive Web Design | Custom Web Design & WordPress Developer</title>
+  <meta name="description" content="Custom web design, WordPress development, and high-converting digital solutions.">
   
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://survivewebdesign.com/">
-  <meta property="og:title" content="Survive Web Design | Professional Web Designer & WordPress Developer">
-  <meta property="og:description" content="Custom web design, WordPress development, and high-converting digital solutions.">
-  <meta property="og:image" content="https://survivewebdesign.com/assets/images/og-preview.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Survive Web Design">
-  <meta name="twitter:description" content="Custom web design and modern WordPress development.">
-  <meta name="twitter:image" content="https://survivewebdesign.com/assets/images/og-preview.jpg">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Survive Web Design",
-    "telephone": "+2349131487810",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Ilobu",
-      "addressRegion": "Osun State",
-      "addressCountry": "NG"
-    },
-    "priceRange": "$$"
-  }
-  </script>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -50,19 +22,14 @@
   <header class="header" id="header">
     <div class="container navbar">
       <a href="index.html" class="nav-brand">SURVIVE <span>WEB DESIGN</span></a>
-      
-      <button class="mobile-nav-toggle" aria-label="Toggle Navigation" aria-expanded="false">
-        <i class="fas fa-bars"></i>
-      </button>
-
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
       <nav class="nav-menu">
         <a href="index.html" class="nav-link active">Home</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#testimonials" class="nav-link">Testimonials</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-
       <div class="nav-actions">
         <a href="https://wa.me/2349060647709" class="btn btn-primary" target="_blank" rel="noopener">Get Started</a>
       </div>
@@ -72,137 +39,45 @@
   <section class="hero">
     <div class="container hero-content">
       <h1 class="hero-title">Elevate Your Brand With <span>Custom Web Design</span> & WordPress Solutions</h1>
-      <p class="hero-subtitle">Fast, responsive, and high-converting websites designed from scratch to maximize your online visibility and drive real sales.</p>
+      <p class="hero-subtitle">Fast, responsive, and high-converting websites designed from scratch to maximize your online visibility.</p>
       <div class="hero-buttons">
-        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-        <a href="https://wa.me/2349060647709" class="btn btn-outline" target="_blank" rel="noopener">Instant Quote</a>
+        <a href="portfolio.html" class="btn btn-primary">View Our Work</a>
+        <a href="contact.html" class="btn btn-outline">Request Quote</a>
       </div>
     </div>
   </section>
 
-  <section class="services" id="services">
+  <section class="services">
     <div class="container">
       <div class="section-title">
-        <h2>Our Core Services</h2>
-        <p>Crafted with precision, performance, and modern standards in mind.</p>
+        <h2>What We Do</h2>
+        <p>Core solutions tailored to grow your business online.</p>
       </div>
       <div class="services-grid">
         <div class="service-card">
           <i class="fas fa-laptop-code service-icon"></i>
-          <h3>Custom Web Development</h3>
-          <p>Framework-free, lightweight HTML5, CSS3, and Vanilla JavaScript websites built for maximum loading speed and security.</p>
+          <h3>Custom Web Design</h3>
+          <p>Lightweight, framework-free HTML5/CSS3/JavaScript websites built for maximum speed and SEO performance.</p>
         </div>
         <div class="service-card">
           <i class="fab fa-wordpress service-icon"></i>
-          <h3>WordPress Solutions</h3>
-          <p>Custom WordPress themes, plugin configuration, and content management systems engineered for easy updates.</p>
+          <h3>WordPress Development</h3>
+          <p>Custom themes and plugin configurations built for easy ongoing content management.</p>
         </div>
         <div class="service-card">
           <i class="fas fa-shopping-cart service-icon"></i>
-          <h3>E-Commerce Stores</h3>
-          <p>Seamless online shopping experiences with automated payment gateways and intuitive product listings.</p>
+          <h3>E-Commerce Builds</h3>
+          <p>High-converting online stores optimized for mobile responsiveness and secure payment integrations.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="portfolio" id="portfolio">
+  <section class="cta-banner" style="text-align: center; background: var(--bg-card); padding: 4rem 1rem;">
     <div class="container">
-      <div class="section-title">
-        <h2>Featured Projects</h2>
-        <p>Explore recent client work and custom web designs.</p>
-      </div>
-
-      <div class="portfolio-filter-buttons">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="wordpress">WordPress</button>
-        <button class="filter-btn" data-filter="custom">Custom Code</button>
-        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
-      </div>
-
-      <div class="portfolio-grid">
-        <div class="portfolio-item" data-category="custom">
-          <div class="portfolio-card">
-            <img src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=Custom+Web+App" alt="Custom Agency Site">
-            <div class="portfolio-info">
-              <h4>Agency Platform</h4>
-              <p>Custom HTML/CSS/JS architecture.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="wordpress">
-          <div class="portfolio-card">
-            <img src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=WordPress+Portal" alt="WordPress Business Site">
-            <div class="portfolio-info">
-              <h4>Corporate Portal</h4>
-              <p>WordPress Development & Custom Theme.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="ecommerce">
-          <div class="portfolio-card">
-            <img src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=E-Commerce+Store" alt="E-Commerce Store">
-            <div class="portfolio-info">
-              <h4>Online Boutique</h4>
-              <p>WooCommerce & Custom Checkout Flow.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-title">
-        <h2>What Clients Say</h2>
-      </div>
-
-      <div class="testimonial-carousel">
-        <div class="testimonial-track">
-          <div class="testimonial-card active">
-            <p>"Survive Web Design built a fast, incredibly slick layout for us. Our site speed score jumped instantly!"</p>
-            <h4>— Business Client</h4>
-          </div>
-          <div class="testimonial-card">
-            <p>"Clean code, no unnecessary clutter, and exceptional attention to detail. Highly recommended!"</p>
-            <h4>— Store Owner</h4>
-          </div>
-        </div>
-        <div class="carousel-controls">
-          <button id="prev-testimonial" aria-label="Previous Testimonial"><i class="fas fa-chevron-left"></i></button>
-          <button id="next-testimonial" aria-label="Next Testimonial"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Get In Touch</h2>
-        <p>Send a message below or chat directly on WhatsApp.</p>
-      </div>
-
-      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-        <input type="hidden" name="subject" value="New Web Inquiry from Survive Web Design">
-        
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-        <div id="form-response" class="form-response"></div>
-      </form>
+      <h2>Have a Project in Mind?</h2>
+      <p style="color: var(--text-muted); margin: 1rem 0 2rem;">Let’s collaborate to build an exceptional web presence for your business.</p>
+      <a href="contact.html" class="btn btn-primary">Start Your Project</a>
     </div>
   </section>
 
@@ -213,26 +88,24 @@
           <a href="index.html" class="nav-brand">SURVIVE <span>WEB DESIGN</span></a>
           <p>High-performance web development and customized digital solutions.</p>
         </div>
-
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h4>Navigation</h4>
           <div class="footer-links">
             <a href="index.html">Home</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
-
         <div class="footer-col">
           <h4>Services</h4>
           <div class="footer-links">
-            <a href="#services">WordPress Customization</a>
-            <a href="#services">Frontend Web Design</a>
-            <a href="#services">SEO Optimization</a>
+            <a href="services.html">WordPress Development</a>
+            <a href="services.html">Custom Frontend</a>
+            <a href="services.html">E-Commerce Setup</a>
           </div>
         </div>
-
         <div class="footer-col">
           <h4>Contact Us</h4>
           <p><i class="fas fa-phone"></i> 09131487810</p>
@@ -240,7 +113,6 @@
           <p><i class="fas fa-map-marker-alt"></i> Ilobu, Osun State, Nigeria</p>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>&copy; <span id="current-year"></span> Survive Web Design. All rights reserved.</p>
         <p>Owner: Muritala Sodiq</p>
