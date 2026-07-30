@@ -39,11 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. DYNAMIC COPYRIGHT YEAR
+  // 3. AUTO-DETECT ACTIVE NAV LINK
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+
+  // 4. DYNAMIC COPYRIGHT YEAR
   const yearSpan = document.getElementById('current-year');
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-  // 4. LIVE WEB3FORMS AJAX SUBMISSION
+  // 5. LIVE WEB3FORMS AJAX SUBMISSION
   const contactForm = document.getElementById('contact-form');
   const formResponse = document.getElementById('form-response');
 
@@ -89,11 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. PORTFOLIO CATEGORY FILTER
+  // 6. PORTFOLIO CATEGORY FILTER (Updated with .hide class)
   const filterBtns = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-  if (filterBtns.length > 0) {
+  if (filterBtns.length > 0 && portfolioItems.length > 0) {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
@@ -103,16 +112,16 @@ document.addEventListener('DOMContentLoaded', () => {
         portfolioItems.forEach(item => {
           const category = item.getAttribute('data-category');
           if (filter === 'all' || category === filter) {
-            item.style.display = 'block';
+            item.classList.remove('hide');
           } else {
-            item.style.display = 'none';
+            item.classList.add('hide');
           }
         });
       });
     });
   }
 
-  // 6. TESTIMONIAL CAROUSEL
+  // 7. TESTIMONIAL CAROUSEL
   const testimonials = document.querySelectorAll('.testimonial-card');
   const prevBtn = document.getElementById('prev-testimonial');
   const nextBtn = document.getElementById('next-testimonial');
