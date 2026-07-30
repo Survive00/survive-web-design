@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Survive Web Design</title>
-  <meta name="description" content="Get in touch with Survive Web Design for custom web development inquiries.">
+  <meta name="description" content="Get in touch with Muritala Sodiq at Survive Web Design for direct project consultations.">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,18 +31,50 @@
     </div>
   </header>
 
-  <section class="page-header" style="text-align: center; padding: 4rem 1rem 2rem;">
+  <section class="page-header">
+    <div class="container" style="text-align: center;">
+      <h1 class="hero-title" style="font-size: 2.5rem;">Start Your <span>Project</span></h1>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0.5rem auto 0;">Have a project in mind? Reach out via form, direct call, or instant WhatsApp message.</p>
+    </div>
+  </section>
+
+  <section class="contact-channels">
     <div class="container">
-      <h1 style="font-size: 2.5rem; font-family: 'Poppins', sans-serif;">Get In <span>Touch</span></h1>
-      <p style="color: var(--text-muted); max-width: 600px; margin: 0.5rem auto 0;">Have a project in mind or need technical consultation? Reach out today.</p>
+      <div class="services-grid">
+        <div class="service-card" style="text-align: center;">
+          <i class="fab fa-whatsapp service-icon" style="color: #25d366;"></i>
+          <h3>WhatsApp Quick Chat</h3>
+          <p style="margin-bottom: 1rem;">Instant discussion regarding project ideas or quotes.</p>
+          <a href="https://wa.me/2349060647709" class="btn btn-primary" target="_blank" rel="noopener">09060647709</a>
+        </div>
+
+        <div class="service-card" style="text-align: center;">
+          <i class="fas fa-phone service-icon"></i>
+          <h3>Direct Call</h3>
+          <p style="margin-bottom: 1rem;">Call directly to speak with lead developer Muritala Sodiq.</p>
+          <a href="tel:09131487810" class="btn btn-outline">09131487810</a>
+        </div>
+
+        <div class="service-card" style="text-align: center;">
+          <i class="fas fa-map-marker-alt service-icon"></i>
+          <h3>Office Location</h3>
+          <p style="margin-bottom: 0.5rem;"><strong>Survive Web Design</strong></p>
+          <p>Ilobu, Osun State, Nigeria</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="contact">
     <div class="container">
+      <div class="section-title">
+        <h2>Send Us a Message</h2>
+        <p>Fill out your details below and we will get back to you within 2 hours.</p>
+      </div>
+
       <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-        <input type="hidden" name="subject" value="New Inquiry from Survive Web Design Contact Page">
+        <input type="hidden" name="subject" value="New Web Inquiry from Survive Web Design">
         
         <div class="form-group">
           <input type="text" name="name" placeholder="Your Full Name" required>
@@ -50,11 +82,22 @@
         <div class="form-group">
           <input type="email" name="email" placeholder="Your Email Address" required>
         </div>
+        
         <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Describe your project requirements..." required></textarea>
+          <select name="project_type" required>
+            <option value="" disabled selected>Select Project Type...</option>
+            <option value="Landing Page">Starter Landing Page</option>
+            <option value="Full Business Site">Full Multi-Page Business Site</option>
+            <option value="WordPress Development">Custom WordPress Theme/Plugin Setup</option>
+            <option value="E-Commerce Store">E-Commerce Online Store</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Tell us about your project goals and timeline requirements..." required></textarea>
         </div>
         
-        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        <button type="submit" class="btn btn-primary btn-block">Submit Project Inquiry</button>
         <div id="form-response" class="form-response"></div>
       </form>
     </div>
@@ -87,8 +130,8 @@
         </div>
         <div class="footer-col">
           <h4>Contact Us</h4>
-          <p><i class="fas fa-phone"></i> 09131487810</p>
-          <p><i class="fab fa-whatsapp"></i> 09060647709</p>
+          <p><i class="fas fa-phone"></i> Direct Call: 09131487810</p>
+          <p><i class="fab fa-whatsapp"></i> WhatsApp: 09060647709</p>
           <p><i class="fas fa-map-marker-alt"></i> Ilobu, Osun State, Nigeria</p>
         </div>
       </div>
