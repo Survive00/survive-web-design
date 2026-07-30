@@ -52,7 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearSpan = document.getElementById('current-year');
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-  // 5. LIVE WEB3FORMS AJAX SUBMISSION
+  // 5. FAQ ACCORDION TOGGLE
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const faqItem = btn.parentElement;
+      faqItem.classList.toggle('active');
+    });
+  });
+
+  // 6. LIVE WEB3FORMS AJAX SUBMISSION
   const contactForm = document.getElementById('contact-form');
   const formResponse = document.getElementById('form-response');
 
@@ -98,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. PORTFOLIO CATEGORY FILTER (Updated with .hide class)
+  // 7. PORTFOLIO CATEGORY FILTER
   const filterBtns = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
 
@@ -119,36 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
-  }
-
-  // 7. TESTIMONIAL CAROUSEL
-  const testimonials = document.querySelectorAll('.testimonial-card');
-  const prevBtn = document.getElementById('prev-testimonial');
-  const nextBtn = document.getElementById('next-testimonial');
-  let currentTestimonial = 0;
-
-  function showTestimonial(index) {
-    testimonials.forEach((card, i) => {
-      card.classList.toggle('active', i === index);
-    });
-  }
-
-  if (testimonials.length > 0) {
-    showTestimonial(currentTestimonial);
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-      });
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-        showTestimonial(currentTestimonial);
-      });
-    }
   }
 
 });
